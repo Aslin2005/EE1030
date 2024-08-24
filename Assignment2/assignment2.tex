@@ -1,0 +1,192 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,10pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+\title{Chapter-$16$ Application of Derivatives}
+\author{EE24BTECH11008-ASLIN GARVASIS}
+\maketitle
+\begin{enumerate}[start=9]
+\item The slope of the tangent to a curve $y=f\brak{x}$ at $\sbrak{x,f\brak{x}}$ is $2x+1.$If the curve passes through the point $\brak{1,2},$ then the area bounded by the curve, the $x$ axis and the line $x=1$ is
+
+\hfill {(1995S)} \\
+
+\begin{enumerate}
+    \item $\frac{5}{6}$
+    \item $\frac{6}{5}$
+    \item $\frac{1}{6}$
+    \item $6$
+\end{enumerate}
+\item If $f\brak{x}=\frac{x}{\sin x}$ and $g\brak{x}=\frac{x}{\tan x}$, where$0$ \textless $x \le 1$, then in this interval
+
+\hfill {(1997-2 Marks)} \\
+
+\begin{enumerate}
+    \item both $f\brak{x}$ and $g\brak{x}$ are increasing functions
+    \item both $f\brak{x}$ and $g\brak{x}$ are decreasing functions 
+    \item $f\brak{x}$ is an increasing function
+    \item $g\brak{x}$ is an increasing function 
+\end{enumerate}
+\item The function $f\brak{x}=\sin^4x+\cos^4x$ increases if
+
+\hfill {(1999-2 Marks)} \\
+
+\begin{enumerate}
+    \item $0$ \textless $x$ \textless $\frac{\pi}{8}$ 
+    \item $\frac{\pi}{4}$ \textless $x$ \textless $\frac{3\pi}{8}$
+    \item $\frac{3\pi}{8}$ \textless $x$ \textless $\frac{5\pi}{8}$
+    \item $\frac{5\pi}{8}$ \textless $x$ \textless $\frac{3\pi}{4}$
+\end{enumerate}
+\item Consider the following statements in S and R \hfill{(2000S)}\\
+\subsubsection*{S} Both $\sin x$ and $\cos x$ are decreasing functions in the interval $\brak{\frac{\pi}{2},\pi}$
+\subsubsection*{R} If a differentiable function decreases in an interval $\brak{a,b}$, then its derivative also decreases in $\brak{a,b}$\\
+Which of the following is true $?$
+
+\begin{enumerate}
+    \item Both S and R are wrong
+    \item Both S and R are correct, but R is not the correct explanation of S
+    \item S is correct and R is the correct explanation for S
+    \item S is correct and R is wrong
+\end{enumerate}
+\item Let $f\brak{x}=\int{e^x\brak{x-1}\brak{x-2}dx}$ Then f decreases in the interval
+\hfill {(2000S)} \\
+\begin{enumerate}
+    \item $\brak{-\infty,-2}$
+    \item $\brak{-2,-1}$
+    \item $\brak{1,2}$
+    \item $\brak{2,+\infty}$
+\end{enumerate}
+\item If the normal to the curve $y=f\brak{x}$ at the point $\brak{3,4}$ makes an angle $\frac{3\pi}{4}$ with the positive $x-$ axis, then $f'\brak{3}=$
+\hfill {(2000S)} \\
+\begin{enumerate}
+    \item $-1$
+    \item $\frac{-3}{4}$
+    \item $\frac{4}{3}$
+    \item $1$
+\end{enumerate}
+\item $$ Let f(x) = 
+\begin{cases} 
+\abs{x} & \text{for } 0 \textless x \leq 2, \\
+1 & \text{for } x = 0 
+\end{cases}
+$$
+Then at $x=0, f$ has 
+
+\hfill {(2000S)} \\
+
+\begin{enumerate}
+    \item a local maximum
+    \item a local minimum
+    \item no local maximum
+    \item no extremum
+\end{enumerate}
+\item For all $x \in \brak{0,1}$ \hfill {(2000S)} \\
+\begin{enumerate}
+    \item $e^x$\textless$1+x$
+    \item $\log_e\brak{1+x}$\textless $x$
+    \item $\sin x$\textgreater $x$
+    \item $\log_e\brak{x}$\textgreater $x$
+\end{enumerate}
+\item If $f\brak{x}=xe^{x\brak{1-x}}$, then $f\brak{x}$ is \hfill {(2001S)} \\
+\begin{enumerate}
+    \item increasing on $\sbrak{\frac{-1}{2},1}$
+    \item decreasing on R
+    \item increasing on R
+    \item decreasing on $\sbrak{\frac{-1}{2},1}$
+\end{enumerate}
+\item The tiangle formed by the tangent to the curve $f\brak{x}=x^2+bx-b$ at the point \brak{1,1}and the coordinate axes, lies in the first quadrant.If its area is $2$, then the value of$b$ is \hfill {(2001S)} \\
+\begin{enumerate}
+    \item $-1$
+    \item $3$
+    \item $-3$
+    \item $1$
+\end{enumerate}
+\item Let $f\brak{x}=\brak{1+b^2}x^2+2bx+1$ and let $m\brak{b}$ be the minimum value of $f\brak{x}.$As $b$ varies, the range of $m\brak{b}$ is \hfill {(2001S)} \\
+\begin{enumerate}
+    \item $\sbrak{0,1}$
+    \item $\brak{0,\frac{1}{2}}$
+    \item $\sbrak{\frac{1}{2},1}$
+    \item $\brak{0,1}$
+\end{enumerate}
+\item The length of a longest interval in which the function $3\sin x-4\sin^3x$ is increasing, is \hfill {(2002S)} \\
+\begin{enumerate}
+    \item $\frac{\pi}{3}$
+    \item $\frac{\pi}{2}$
+    \item $\frac{3\pi}{2}$
+    \item $\pi$
+\end{enumerate}
+\item The point$\brak{s}$ on the curve $y^3+3x^2=12y$ where the tangent is vertical, is$\brak{are}$ \hfill{(2002S)} \\
+\begin{enumerate}
+    \item $\brak{\pm \frac{4}{\sqrt{3}},-2}$
+    \item $\brak{\pm \sqrt{\frac{11}{3}},1}$
+    \item $\brak{0,0}$
+    \item $\brak{\pm \frac{4}{\sqrt{3}},2}$
+\end{enumerate}
+\item In $\sbrak{0,1}$ Lagranges Mean Value Theorem is NOT applicable to \hfill {(2003S)} \\
+\begin{enumerate}
+    \item $$  f(x) = 
+\begin{cases} 
+\frac{1}{2}-x &  x \textless \frac{1}{2}\\
+\brak{\frac{1}{2}-x}^2 & x \geq \frac{1}{2}
+\end{cases}
+$$
+    \item $$  f(x) = 
+\begin{cases} 
+\frac{\sin x}{x} &  x \neq 0\\
+1 & x = 0
+\end{cases}
+$$
+    \item $f\brak{x}=x\abs{x}$
+    \item $f\brak{x}=\abs{x}$
+\end{enumerate}
+\item A tangent is drawn to ellipse $\frac{x^2}{27}+y^2=1$ at $\brak{3\sqrt{3}\cos \theta, \sin \theta}$ $\brak{where \theta \in \brak{0,\frac{\pi}{2}}.}$ Then the value of $\theta$ such that sum of intercepts on axes made by this tangent is minimum, is \hfill {(2003S)} \\
+\begin{enumerate}
+    \item $\frac{\pi}{3}$
+    \item $\frac{\pi}{6}$
+    \item $\frac{\pi}{8}$
+    \item $\frac{\pi}{4}$
+\end{enumerate}
+\end{enumerate}
+\end{document}
