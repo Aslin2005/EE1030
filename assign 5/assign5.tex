@@ -53,9 +53,6 @@
 \setlength{\intextsep}{10pt} % Space between text and floats
 
 
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
  \textbf{Question:}\\Constuct a triangle whose sides are $3.6cm, 3.0cm$ and $4.8cm.$ Bisect the smallest angle and measure each part.
  
  \solution \\ 
@@ -70,9 +67,17 @@ The angle bisector of a triangle of a triangle divides the opposite side into tw
 \begin{align}
 	\because \norm{AC}&=3.6\\
 	\because \norm{AB}&=4.8\\
-	\because \norm{BC}&=3\\
+	\because \norm{BC}&=3.0\\
+	\cos{\angle BAC}&=\norm{\frac{\vec{AC}^T\vec{AB}}{\norm{AC}\norm{AB}}}=0.78\\
+	\angle{BAC}&=38.73\degree\\
+	\cos{\angle ABC}&=\norm{\frac{\vec{BC}^T\vec{BA}}{\norm{BC}\norm{BA}}}=0.66\\
+	\angle{ABC}&=48.70\degree\\
+	\cos{\angle ACB}&=\norm{\frac{\vec{CA}^T\vec{CB}}{\norm{CA}\norm{CB}}}=0.05\\
+	\angle{ACB}&=87.13\degree\\
 	\therefore \vec{D}&=\frac{\norm{AC}.\vec{B}+\norm{AB}.\vec{C}}{\norm{AC}+\norm{BC}}\\
 	\implies \vec{D}&=3.6\myvec{4.8\\0}+4.8\myvec{2.81\\2.24}=\myvec{3.66\\1.28}\\
+	\cos{\angle BAD}&=\norm{\frac{\vec{AB}^T\vec{AD}}{\norm{AB}\norm{AD}}}=0.94\\
+	\angle{BAD}&=19.28\degree\\
 	\implies \norm{BD}&=\frac{\norm{BC}\norm{AB}}{\norm{AB}+\norm{AC}}=1.71\\
 	\implies \norm{CD}&=\frac{\norm{BC}\norm{AC}}{\norm{AB}+\norm{AC}}=1.28
  \end{align}
