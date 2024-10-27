@@ -1,0 +1,355 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,15pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+\title{2007-EE}
+\author{EE24BTECH11008-ASLIN GARVASIS}
+\maketitle
+\begin{enumerate}[start=69]
+    \item Which one of the following statements regarding the INT $\brak{\text{interrupt}}$ and the BRQ $\brak{\text{bus request}}$ pins in a CPU is true $?$\\
+    \begin{enumerate}
+        \item The BRQ pin is sampled after every instruction cycle, but the INT is sampled after every machine cycle
+        \item Both INT and BRQ are sampled after every machine cycle
+        \item The INT pin is sampled after every instruction cycle, but the BRQ is sampled after every machine cycle
+        \item Both INT and BRQ are sampled after every instruction cycle
+    \end{enumerate}
+    \item A bridge is shown in the figure below. Which one of the sequences given below is most suitable for balancing the bridge $?$
+\begin{circuitikz}
+    % Define the nodes and components
+    \draw
+    (2,2) to[R=$R_1$] (3,3)  % Resistor R1 from bottom left to top left
+    (0.5,0.5) to[L=$jX_1$] (1.5,1.5)
+    (0,0) -- (0.5,0.5)
+    (1.5,1.5) -- (2,2)
+    (3,3) -- (3.5,3.5)
+    (3.5,3.5) -- (5,2)
+    (6,1) -- (7,0)
+    (0,0) -- (1,-1)
+    (2,-2) -- (3.5,-3.5)
+    (3.5,-3.5) -- (4,-3)
+    (5,-2) -- (5.5,-1.5)
+    (6.5,-0.5) -- (7,0)
+    (0,0) -- (-1,0)
+    (7,0) -- (8,0)
+    (-1,0) -- (-1,-4)
+    (8,0) -- (8,-4)
+    (-1,-4) -- (3,-4)
+    (8,-4) -- (5,-4)
+    (1,-1) to[R=$R_3$] (2,-2) % Resistor R3 from bottom left to bottom right
+    (5,2) to[R=$R_2$] (6,1)  % Resistor R2 from top left to right
+    (5.5,-1.5) to[R=$R_4$] (6.5,-0.5) % Resistor R4 from bottom right to right
+    (4,-3) to[C=$-jX_4$] (5,-2)
+           % Straight line from right to ground
+    (3.5,3.5) -- (3.5,2) % Vertical line connecting R1 and R3 (Bridge)
+    (3.5,-3.5) -- (3.5,-2)
+    % Voltage source on the left side of the bridge
+    (3,-4) to[sV, l=$V_{in}$] (5,-4); % Sinusoidal voltage source
+\end{circuitikz}
+\begin{enumerate}
+    \item First adjust $R_4$ and then adjust $R_1$
+    \item First adjust $R_2$ and then adjust $R_3$
+    \item First adjust $R_2$ and then adjust $R_4$
+    \item First adjust $R_4$ and then adjust $R_2$
+\end{enumerate}
+\end{enumerate}
+\begin{center}
+    \textbf{Common Data Questions}
+\end{center}
+\textbf{Common Data for Questions $71,72,73 $ $:$}\\
+A three phase squirrel cage induction motor has a starting current of seven times the full load current and full load slip of $5\%$ 
+\begin{enumerate}[start=71]
+    \item If an autotransformer is used for reduced voltage starting to provide $1.5$ per unit starting torque, the transformer ratio $\brak{\%}$ should be
+    
+    \begin{enumerate}
+        \item $57.77\%$
+        \item $72.56\%$
+        \item $78.25\%$
+        \item $81.33\%$
+    \end{enumerate}
+    \item If a star-delta starter is used to start this induction motor, the per unit starting torque will be
+    \begin{enumerate}
+        \item $0.607$
+        \item $0.816$
+        \item $1.225$
+        \item $1.616$
+    \end{enumerate}
+    \item If a starting torque of $0.5$ per unit is required then the per unit starting current should be 
+    \begin{enumerate}
+        \item $4.65$
+        \item $3.75$
+        \item $3.16$
+        \item $2.13$
+    \end{enumerate}
+\end{enumerate}
+\textbf{Coomon Data for Questions $74,75$ $:$}\\
+A $!:1$ Pulse Transformer $\brak{\text{PT}}$ is used to trigger the SCR in the adjacent figure. The SCR is rated at $1.5\brak{kV},$ $250\brak{A}$ with $I_L=250\brak{mA},I_H=150\brak{mA},$ and $I_{Gmax}=150,I_{Gmin}=100\brak{mA}.$ The SCR is connected to an inductive load, where L=$150\brak{mH}$ in series with a small resistance and the supply voltage is $200\brak{V}$ dc. The forward drops of all transistors/diodes and gate-cathode junction during ON state are $1.0\brak{0V}.$
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (7,14.25) to[L ] (7,12);
+\draw (7.5,12) to[short] (7.5,14.25);
+\draw (7.75,14.25) to[short] (7.75,12);
+\draw (8.25,14.25) to[L ] (8.25,12);
+\node [font=\normalsize] at (7.5,14.75) {PT};
+\draw (7,14.25) to[short] (6,14.25);
+\draw (6,13.5) to[D] (6,14.25);
+\draw (6,13.5) to[R] (6,12.5);
+\draw (6,12.5) to[short] (6,12);
+\draw (6,12) to[short] (7,12);
+\draw (8.25,14.25) to[D] (9,14.25);
+\draw (9,14.25) to[short] (9,13.25);
+\draw (9,12.75) to[D] (9,13.25);
+\draw (9,12.75) to[short] (9,12);
+\draw (8.25,12) to[short] (9,12);
+\draw (9,14.25) to[R] (10,14.25);
+\draw (10,14.25) to[short] (10.5,14.25);
+\draw (10.5,14.25) to[short] (10.5,13.5);
+\draw (10.5,13.5) to[C] (10.5,12.75);
+\draw (9,12) to[short] (10.5,12);
+\draw (10.5,12.75) to[short] (10.5,12);
+\draw (10.5,12) to[short] (11,12);
+\draw (11,14.75) to[short] (11,12);
+\draw (11,12) to[short] (11,11.5);
+\draw (10.5,14.25) to[short] (11,14.75);
+\draw (11,15.25) to[D] (11,14.5);
+\draw (11,15.25) to[short] (11,15.75);
+\draw (11,15.75) to[short] (11.5,15.75);
+\draw (11.5,15.75) to[R,l={ \small 1.0$\Omega$}] (12.5,15.75);
+\draw (12.5,15.75) to[short] (13,15.75);
+\draw (13,15.75) to[short] (13,14.25);
+\draw (13,14.25) to[L,l={ \small L} ] (13,13);
+\draw (13,13) to[battery1,l=$+200 V$] (13,11.5);
+\draw (11,11.5) to[short] (13,11.5);
+\draw (6.5,12) to[short] (6.5,11.5);
+\draw (6,11.75) to[short] (6,10.25);
+\draw (5.25,11) to[short] (6,11);
+\draw (6,11) to[short] (6.5,11.5);
+\draw (6.5,10.75) to[short] (6.5,10);
+\draw [->, >=Stealth] (6,11) -- (6.5,10.75);
+\draw [ line width=1.5pt](6.25,10) to[short] (6.75,10);
+\draw [line width=0.6pt, ->, >=Stealth] (6.5,14.25) -- (6.5,14.75);
+\node [font=\small] at (6,15) {+10 V};
+
+\node [font=\small] at (9.5,14.75) {R};
+\node [font=\small] at (11.5,15.25) {\textbf{S}};
+\node [font=\small] at (11.5,15) {\textbf{C}};
+\node [font=\small] at (11.5,14.75) {\textbf{R}};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}[start=74]
+    \item The resistor R should be
+    \begin{enumerate}
+        \item $4.4\brak{k\ohm}$
+        \item $470\brak{\ohm}$
+        \item $47\brak{\ohm}$
+        \item $4.7\brak{\ohm}$
+    \end{enumerate}
+    \item The minimum approximate volt-second rating of the pulse transformer suitable for triggering the SCR should be$;$ $\brak{\text{volt-second rating is the maximum of product of the voltage and the width of the pulse that may be applied}}$
+    \begin{enumerate}
+        \item $2000\brak{\mu V-s}$
+        \item $200\brak{\mu V-s}$
+        \item $20\brak{\mu V-s}$
+        \item $2.0\brak{\mu V-s}$
+    \end{enumerate}
+\end{enumerate}
+\begin{center}
+    \textbf{Linked Answer Questions: Q$.76$ to Q$.85$ carry two marks each.}
+\end{center}
+\textbf{Statement for Linked Answer Questions $76 \& 77:$}\\
+An inductor designed with $400$ turns coil wound on an iron core of $16\brak{cm^2}$ cross sectional area with a cut of an air gap length of $1\brak{mm}.$ The coil is connected to a $230\brak{V},5050\brak{Hz}$ ac supply. Neglect coil resistence, core loss, iron reluctance and leakage inductance. $\brak{\mu_0=4\pi\times10^{-7}H/m}$
+\begin{enumerate}[start=76]
+    \item The current in the inductor is
+    \begin{enumerate}
+        \item $18.08\brak{A}$
+        \item $9.04\brak{A}$
+        \item $4.56\brak{A}$
+        \item $2.28\brak{A}$
+    \end{enumerate}
+    \item The average force on the core to reduce the air gap will be
+    \begin{enumerate}
+        \item $832.29\brak{N}$
+        \item $1666.22\brak{N}$
+        \item $3332.47\brak{N}$
+        \item $6664.84\brak{N}$
+    \end{enumerate}
+\end{enumerate}
+\textbf{Statement for Linked Answer Qestions $78 \& 79;$}\\
+Cayley-Hamilton Theorem states that a square matrix satisfies its own characteristic equation.\\
+Consider a matrix
+\begin{center}
+    $$A=\myvec{-3&2\\-1&0}$$
+\end{center}
+\begin{enumerate}[start=78]
+    \item A satisfies the relation
+    \begin{enumerate}
+        \item $A+3I+2A^{-1}=0$
+        \item $A+2I+2A=0$
+        \item $\brak{A+I}\brak{A+2I}=0$
+        \item $\exp\brak{A}$
+    \end{enumerate}
+    \item $A^9$ equals
+    \begin{enumerate}
+        \item $511A+310I$
+        \item $309A+104I$
+        \item $154A+155I$
+        \item $\exp\brak{9A}$
+    \end{enumerate}
+\end{enumerate}
+\textbf{Statement for Linked Answer Questions $80 \& 81$:}\\
+Consider the R-L-C circuit shown in figure
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=0.3pt](6.5,14.5) to[short] (6.5,13.25);
+\draw [ line width=0.3pt ] (6.5,13) circle (0.25cm);
+\draw [ line width=0.3pt](6.5,12.75) to[short] (6.5,12);
+\draw [ line width=0.3pt](6.5,14.5) to[R,l={ \small R=10$\Omega$}] (8.5,14.5);
+\draw [line width=0.3pt](8.5,14.5) to[L,l={ \small L=1mH} ] (10.25,14.5);
+\draw [line width=0.3pt](10.25,14.5) to[C,l={ \small C=10$\mu$ F}] (10.25,13);
+\draw [ line width=0.3pt](10.25,13) to[short] (10.25,12);
+\draw [ line width=0.3pt](6.5,12) to[short] (10.25,12);
+\node [font=\normalsize] at (5.75,13) {$e_i$};
+\node [font=\normalsize] at (12,13.25) {$e_0$};
+\draw [line width=0.3pt, ->, >=Stealth] (12,13.5) -- (12,14.5);
+\draw [line width=0.3pt, ->, >=Stealth] (12,13) -- (12,12);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}[start=80]
+    \item For a step-input $e_i$ the overshoot in the output $e_0$ will be
+    \begin{enumerate}
+        \item $0,$ since the system is not under-damped
+        \item $5\%$
+        \item $16\%$
+        \item $48\%$
+    \end{enumerate}
+    \item If the above step responce is to be observed on a non-storage CRO, then it would be best to have the $e_i$ as a
+    \begin{enumerate}
+        \item step function
+        \item square wave of frequency $50\brak{Hz}$
+        \item square wave of frequency $300\brak{Hz}$
+        \item square wave of frequency $2.0\brak{kHz}$
+    \end{enumerate}
+\end{enumerate}
+\textbf{Statement for Linked Answer Questions $82 \& 83:$}\\
+The associated figure shows the two types of rotate right instructions $R1,$ $R2$ available in a microscope where Reg is a $8-$ bit register and C is the carry bit. The rotate left instructions $L1$ and $L2$ are similar except that C now links the most significant Reg instead of the least significant one.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+
+
+\draw [ line width=0.3pt ] (7,15) rectangle (10.25,14.5);
+\draw [ line width=0.3pt ] (7,13.75) rectangle (10.25,13.25);
+\draw [ line width=0.3pt ] (11.5,15) rectangle (12,14.5);
+\draw [ line width=0.3pt ] (11.5,13.75) rectangle (12,13.25);
+\node [font=\normalsize] at (8.5,14.75) {$Reg$};
+\node [font=\normalsize] at (8.5,13.5) {$Reg$};
+\node [font=\normalsize] at (11.75,14.75) {$C$};
+\node [font=\normalsize] at (11.75,13.5) {$C$};
+\draw [ line width=0.3pt](12,14.75) to[short] (12.5,14.75);
+\draw [ line width=0.3pt](12.5,14.75) to[short] (12.5,14.25);
+\draw [ line width=0.3pt](12.5,14.25) to[short] (6.5,14.25);
+\draw [ line width=0.3pt](6.5,14.75) to[short] (6.5,14.25);
+\draw [ line width=0.3pt](10.25,13.5) to[short] (10.75,13.5);
+\draw [ line width=0.3pt](10.75,13.5) to[short] (10.75,13);
+\draw [ line width=0.3pt](10.75,13) to[short] (6.5,13);
+\draw [ line width=0.3pt](6.5,13) to[short] (6.5,13.5);
+\draw [line width=0.3pt, ->, >=Stealth] (6.5,14.75) -- (7,14.75);
+\draw [line width=0.3pt, ->, >=Stealth] (10.25,14.75) -- (11.5,14.75);
+\draw [line width=0.3pt, ->, >=Stealth] (10.75,13.5) -- (11.5,13.5);
+\draw [line width=0.3pt, ->, >=Stealth] (6.5,13.5) -- (7,13.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}[start=82]
+    \item Suppose Reg contains the $2\prime s$ complement number $111010110.$ If this number is divided by $2$ the answer should be
+    \begin{enumerate}
+        \item $01101011$
+        \item $10010101$
+        \item $11101001$
+        \item $11101011$
+    \end{enumerate}
+    \item Such a division can be correctly performed by the following set of operations
+    \begin{enumerate}
+        \item $L2,R2,R1$
+        \item $L2,R1,R2$
+        \item $R2,L1,R2$
+        \item $R1,L2,R2$
+    \end{enumerate}
+\end{enumerate}
+\textbf{Statement Linked Answer Questions $84 \& 85:$}\\
+\begin{enumerate}[start=84]
+    \item A signal is processed by a casual filter with transfer function $G\brak{s}.$ For a distortion free output signal waveform, $G\brak{s}$ must
+    \begin{enumerate}
+        \item provide zero phase shift for all frequency
+        \item provide constant phase shift for all frequency
+        \item provide linear phase shift that is proportional to frequency
+        \item provide a phase shift that is inversely proportional to frequency
+    \end{enumerate}
+    \item $G\brak{z}=\alpha z^{-1}+\beta z^{-3}$ is a low-pass digital filter with a phase characteristics same as that of the above question if
+    \begin{enumerate}
+        \item $\alpha =\beta$
+        \item $\alpha =-\beta$
+        \item $\alpha =\beta^{\brak{\frac{1}{3}}}$
+        \item $\alpha =\beta^{\brak{\frac{-1}{3}}}$
+    \end{enumerate}
+\end{enumerate}
+\end{document}
