@@ -1,0 +1,365 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,15pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+\title{2012-XE: ENGINEERING SCIENCES}
+\author{EE24BTECH11008-ASLIN GARVASIS}
+\maketitle
+\begin{enumerate}[start=6]
+    \item In the case of a fully developed flow through a pipe, the shear stress at the centerline is
+    \begin{enumerate}
+        \item a function of the axial distance
+        \item a function of the centerline velocity
+        \item zero
+        \item infinite
+    \end{enumerate}
+    \item The velocity in a one-dimensional unsteady flow is given by $\brak{x^2-t},$ where $x$ is the position and $t$ is the time. The total acceleration at any $x$ and $t$ is
+    \begin{enumerate}
+        \item $-1+xt+x^3$
+        \item $-1+xt+2x^3$
+        \item $-1-xt-x^3$
+        \item $-1-2xt+2x^3$
+    \end{enumerate}
+    \item If $\psi$ is the stream function, the Laplace's equation $\Delta \psi=0$ is true when the flow is
+    \begin{enumerate}
+        \item incompressible
+        \item incompressible and irrotational
+        \item irrotational
+        \item compressible
+    \end{enumerate}
+    \item A fully developed laminar flow is taking place through a pipe. If the flow velocity is doubled maintaining the flow laminar, the pressure loss would be
+    \begin{enumerate}
+        \item halved
+        \item unaltered
+        \item doubled
+        \item trebled
+    \end{enumerate}
+    \textbf{Q.$10-$ Q.$22$ carry two marks each.}\\
+    \item In the following equations, $u$ and $v$ are the velocities in the $x-$ and $y-$ directions, respectively and $t$ is time. The flow field that CANNOT be termed as incompressible is
+    \begin{enumerate}
+        \item $u=x^3+xy^2,v=y^3+yx^2$
+        \item $u=10xt,v=-10yt$
+        \item $u=\brak{\frac{y}{\delta}}^\frac{1}{7},v=0$ $\brak{\delta=constant}$
+        \item $u=2y,v=2x$
+    \end{enumerate}
+    \item A U-tube mercury $\brak{Hg}$ manometer as shown below is employed to measure the pressure of an oil-filled vessel. The densities of Hg and oil are $13600\brak{\frac{kg}{m^3}}$ and $800\brak{\frac{kg}{m^3}},$ respectively. The gravitational acceleration may be taken as $10\brak{\frac{m}{s^2}}.$ The gauge pressure $\brak{in Pa}$ at a point A when $h_1=0.5\brak{m}$ and $h_2=0.9\brak{m},$ is approximately
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+
+
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (5.75,10.25) circle (1.5cm);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (7.25,10.5) rectangle (9.75,10);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (9.5,10.5) rectangle (10,6.25);
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (9.5,6.25) rectangle (10,5.5);
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (9.5,5.5) rectangle (10.75,5);
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (10.75,5.5) rectangle (11.25,5);
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (11.25,5.5) rectangle (10.75,11.75);
+\draw (10.75,11.75) to[short] (10.75,12.5);
+\draw (11.25,11.75) to[short] (11.25,12.5);
+\node [font=\LARGE] at (5.75,11) {A};
+\node [font=\LARGE] at (5.5,10) {Oil};
+\draw [->, >=Stealth] (11.75,11) -- (11.25,10.25);
+\draw [short] (9.5,6.25) -- (14.5,6.25);
+\draw [short] (10,10.25) -- (13,10.25);
+\draw [->, >=Stealth] (12.75,6.25) -- (12.75,10.25);
+\draw [short] (10.75,11.75) -- (12.75,11.75);
+\draw [short] (10.75,11.75) -- (14.5,11.75);
+\draw [->, >=Stealth] (14.25,6.25) -- (14.25,11.75);
+\node [font=\normalsize] at (13,8.5) {h1};
+\node [font=\normalsize] at (14.75,9.25) {h2};
+\node [font=\large] at (12,11) {Hg};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $118.4\times10^3$
+    \item $118.4$
+    \item $11.84$
+    \item $1.184$
+\end{enumerate}
+\item Water is supplied to a tank at the rate of 40.02\brak{\frac{m^3}{s}} as shown below. The cross-sectional  area of the tank is $1 \brak{mm}$ and the inner diameter of the outlet pipe is $60 \brak{mm}.$ At a time when the water level in the tank is increasing at the rate of $5 \brak{\frac{mm}{s}},$ the average velocity $\brak{in \brak{\frac{m}{s}}}$ of water in the outlet pipe is approximately
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+
+\draw [short] (6,10) -- (6,6.25);
+\draw [short] (9.5,10) -- (9.5,6.5);
+\draw [short] (6,6.25) -- (7.25,6.25);
+\draw [short] (9.5,6.5) -- (9.5,6.25);
+\draw [short] (8.5,6.25) -- (9.5,6.25);
+\draw [short] (8.25,6.25) -- (8.5,6.25);
+\draw [short] (7.25,6.25) -- (7.5,6.25);
+\draw [short] (7.5,6.25) -- (7.75,6.25);
+\draw [short] (7.75,6.25) -- (7.75,5.25);
+\draw [short] (8.25,6.25) -- (8.25,5.25);
+\draw [short] (6,9.25) -- (9.5,9.25);
+\draw [short] (5,11.5) -- (8,11.5);
+\draw [short] (8,11.5) -- (8,10);
+\draw [short] (5,11) -- (7.5,11);
+\draw [short] (7.5,11) -- (7.5,10);
+\draw [->, >=Stealth] (7.75,10.25) -- (7.75,9.5);
+\draw [->, >=Stealth] (8,5.5) -- (8,4.5);
+\node [font=\normalsize] at (9.5,5.75) {Outline pipe};
+\node [font=\normalsize] at (11.25,11) {Tank water level};
+\node [font=\normalsize] at (6,11.75) {Water supply};
+\draw [->, >=Stealth] (10,11) -- (8.75,9.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $0.005$
+    \item $0.06$
+    \item $5.3$
+    \item $20$
+\end{enumerate}
+\item The water level in a gas-pressurized tank with a large cross-sectional area is maintained constant as shown in the figure below. The water level in the tank is $4.2 \brak{m}$ above the pipe centerline as indicated in the figure. The gas pressure is $130 \brak{kPa}.$ The atmospheric pressure, gravitational acceleration and density of water may be taken as $100 \brak{kPa},$ $10 \brak{\frac{m}{s^2}}$ and $1000 \brak{\frac{kg}{m^3}},$ respectively. Neglecting losses, the maximum velocity in $\brak{\frac{m}{s}}$ of water at any location in the horizontal portion of the delivery pipe for the pressure NOT to drop below atmospheric pressure, is
+\begin{figure}[!ht]
+\centering
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+
+\draw [short] (9.5,11.25) -- (9.5,8);
+\draw [short] (9.5,8) -- (9.5,7.75);
+\draw [short] (9.5,7.75) -- (7.5,7.75);
+\draw [short] (4.75,7.75) -- (6.75,7.75);
+\draw [short] (6.75,7.75) -- (6.75,5.25);
+\draw [short] (7.5,7.75) -- (7.5,5.75);
+\draw [short] (6.75,5.25) -- (10,5.25);
+\draw [short] (7.5,5.75) -- (11.5,5.75);
+\draw [short] (10,5.25) -- (11.5,5.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (4.75,9.5) rectangle (9.5,7.75);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (6.75,7.75) rectangle (7.5,7.5);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} ] (6.75,7.5) rectangle (7.5,5.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (6.75,7.75) rectangle (7.5,7.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (6.75,7) -- (6.75,7.75);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (6.75,7.75) -- (6.75,8);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (6.75,7.25) -- (6.75,7.75);
+\draw [short] (6.75,7.75) -- (6.75,6.75);
+\draw [short] (7.5,7.75) -- (7.5,7);
+\draw [short] (4.75,7.75) -- (6.75,7.75);
+\draw [short] (4.75,9.5) -- (4.75,7.75);
+\draw [short] (9.5,9.5) -- (9.5,7.75);
+\draw [short] (7.5,7.75) -- (9.5,7.75);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (7.5,5.75) rectangle (11,5.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (11,5.75) rectangle (11.5,5.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, dashed] (6.75,5.5) -- (11.5,5.75);
+\draw [dashed] (6.75,5.5) -- (10.5,5.5);
+\draw [->, >=Stealth] (10.5,5.5) -- (11.25,5.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (2.75,11) rectangle (4.75,10.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (4.75,11) rectangle (5.5,10.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123} , fill={rgb,255:red,119; green,118; blue,123}] (5.25,11) rectangle (5.75,9.5);
+\draw [short] (4.75,9.5) -- (4.75,10.25);
+\draw [short] (4.75,10.25) -- (4.75,10.5);
+\draw [short] (4.75,11) -- (4.75,11.5);
+\draw [<->, >=Stealth] (4,5.25) -- (4,9.5);
+\draw [short] (3.75,9.5) -- (4.75,9.5);
+\draw [short] (3.5,5.25) -- (5,5.25);
+\draw [->, >=Stealth] (3,10.75) -- (4.5,10.75);
+\draw (4.75,11.5) to[short] (9.5,11.5);
+\draw (9.5,11.5) to[short] (9.5,8.5);
+\node [font=\normalsize] at (7.25,10.75) {Gas};
+\node [font=\normalsize] at (6.75,8.5) {Water};
+\node [font=\normalsize] at (3.5,8) {4.2 m};
+\node [font=\normalsize] at (2.75,11.25) {Watre supply};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $1.3$
+    \item $4.2$
+    \item $10$
+    \item $12$
+\end{enumerate}
+\item The figure given below shows typical non-dimensional velocity profiles for fully developed laminar flow between two infinitely long parallel plates separated by a distance a along y-direction. The upper plate is moving with a constant velocity $u$ in the x-direction and the lower plate is stationary.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.35\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\begin{scope}[rotate around={-98:(10.5,15)}]
+    \draw[domain=10.5:16.75,samples=100,smooth] plot (\x,{2*(-sin(0.4*\x r -10.5 r )) + 15});
+\end{scope}
+\begin{scope}[rotate around={-117.5:(10.5,15)}]
+\draw[domain=10.5:16.75,samples=100,smooth] plot (\x,{2*sin(0.4*\x r -10.5 r ) +15});
+\end{scope}
+\draw [short] (8.5,9) -- (10.5,15);
+\draw  (4.5,15) rectangle (13,9);
+\draw [dashed] (8.5,9) -- (8.5,15);
+\draw [short] (5.75,9) -- (5.75,9.25);
+\draw [short] (7,9) -- (7,9.25);
+\draw [short] (10,9) -- (10,9.25);
+\draw [short] (12.5,6.25) -- (12.25,6.5);
+\draw [short] (11.25,9) -- (11.25,9.25);
+\node [font=\normalsize] at (4.25,9.25) {0};
+\node [font=\normalsize] at (4.5,8.75) {-3};
+\node [font=\normalsize] at (5.75,8.75) {-2};
+\node [font=\normalsize] at (7,8.75) {-1};
+\node [font=\normalsize] at (8.5,8.75) {0};
+\node [font=\normalsize] at (10,8.75) {1};
+\node [font=\normalsize] at (11.25,8.75) {2};
+\node [font=\normalsize] at (13,8.75) {3};
+\node [font=\normalsize] at (4,15) {1};
+\node [font=\normalsize] at (4,12.75) {y};
+\node [font=\normalsize] at (4,12.25) {a};
+\draw (3.75,12.5) to[short] (4.25,12.5);
+\node [font=\normalsize] at (8.5,8.25) {u/U};
+\node [font=\normalsize] at (8.5,11.25) {III};
+\node [font=\normalsize] at (10.25,12.25) {II};
+\node [font=\normalsize] at (11.75,10.75) {I};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+Match the non-dimensional velocity profiles in Column I with Column II
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|} % 'c' for centered columns, '|' for vertical lines
+        \hline
+        \textbf{Column I} & \textbf{Column II} \\ % Table header
+        \hline
+        P. profile I & $\frac{\partial p}{\partial x}\textgreater 0$\\
+        \hline
+        Q. profile II & $\frac{\partial p}{\partial x}\textless 0$\\
+        \hline
+        R. profile III & $\frac{\partial p}{\partial x}= 0$\\
+        \hline
+        
+    \end{tabular}
+\end{table}
+\begin{enumerate}
+    \item $P-2;Q-3;R-1$
+    \item $P-3;Q-2;R-1$
+    \item $P-3;Q-1;R-2$
+    \item $P-1;Q-2;R-3$
+\end{enumerate}
+\item Air flows over a spherical storage vessel of diameter $4 \brak{m}$ at a speed of $1 \brak{\frac{m}{s}}.$ To find the drag force on the vessel, a test run is to be carried out in water using a sphere of diameter $100 \brak{mm}$ The density and dynamic viscosity of air are $1.2\brak{\frac{kg}{ m ^ 3}}$ and $1.8 * 10 ^ - 5 \brak{Pa.s},$ respectively. The density and dynamic viscosity of water are $1000\brak{\frac{kg}{m^3}\times i}$ and $10 ^ - 3 \brak{Pa.s},$ respectively. The drag force on the model is $4 \brak{N}$ under dynamically similar conditions. The drag force in $\brak{N}$ on the prototype is approximately
+\begin{enumerate}
+    \item $0.25$
+    \item $0.93$
+    \item $1.08$
+    \item $4$
+\end{enumerate}
+\item The velocity of an air stream is $20 \brak{\frac{m}{s}}.$ The densities of mercury and air are $13600 \brak{\frac{kg}{m^3}}$ and $1.2\frac{kg}{m},$ respectively. The gravitational acceleration may be taken as $10 \brak{\frac{m}{s}}$ When a Pitot-static tube is placed in the stream, assuming the flow to be incompressible and frictionless, the difference between the stagnation and static pressure in the flow field $\brak{in mm Hg}$ would approximately be
+\begin{enumerate}
+    \item $1760$
+    \item $1.76$
+    \item $0.57$
+    \item $0.57\times10^{-5}$
+\end{enumerate}
+\textbf{Common Data Questions}\\
+\\
+\textbf{Common Data for Questions $17$ and $18:$}\\
+\\A vessel containing water $\brak{\text{density 1000 \brak{\frac{kg}{m^3}}}}$ and oil $\brak{\text{density 800 \brak{\frac{kg}{m^3}}}},$ pressurized by gas, is shown in the figure below. Assume that the gravitational acceleration is $10 \brak{\frac{m}{s^2}}.$ 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+
+
+\draw  (8,12) rectangle (11.75,7.5);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} ] (8,12) rectangle (11.75,13.25);
+\draw [short] (8,13.25) -- (8,14);
+\draw [short] (11.75,13) -- (11.75,14);
+\draw [short] (8,14) -- (10,14);
+\draw [short] (11.75,14) -- (11.25,14);
+\draw [short] (10,14) -- (10,15);
+\draw [short] (11.25,14) -- (11.25,15);
+\draw [ fill={rgb,255:red,192; green,191; blue,188} ] (10,14.75) rectangle (11.25,14.5);
+\draw [ fill={rgb,255:red,192; green,191; blue,188} ] (10.5,15.75) rectangle (10.75,14.75);
+\draw [ fill={rgb,255:red,192; green,191; blue,188} ] (8,10) rectangle (7.75,8.75);
+\draw [<->, >=Stealth] (8.25,10) -- (8.25,8.75);
+\draw [<->, >=Stealth] (7.25,10) -- (7.25,12);
+\draw [<->, >=Stealth] (7,8.75) -- (7,7.5);
+\draw [<->, >=Stealth] (12.5,13.25) -- (12.5,12);
+\node [font=\large] at (10,13.5) {Gas(2 bar)};
+\node [font=\large] at (9.75,12.75) {Oil};
+\node [font=\large] at (9.5,8.25) {Water};
+\node [font=\normalsize] at (8.75,9.5) {1 m};
+\node [font=\normalsize] at (6.5,11.25) {1 m};
+\node [font=\normalsize] at (6.5,8.25) {1 m};
+\node [font=\normalsize] at (13,12.75) {1 m};
+\node [font=\large] at (5.5,10.25) {Gate};
+\draw [->, >=Stealth] (6,10.25) -- (7.75,9.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\item The pressure $\brak{\text{in bar}}$ exerted on the wall inside the vessel is approximately
+\begin{enumerate}
+    \item $0.238$
+    \item $2.38$
+    \item $23.8$
+    \item $238$
+\end{enumerate}
+\item The gate is $1 \brak{m}$ wide perpendicular to the plane of the paper. The force $\brak{\text{in N}}$ exerted on the gate is approximately
+\begin{enumerate}
+    \item $2.23\times10^3$
+    \item $2.23\times10^4$
+    \item $2.23\times10^5$
+    \item $2.23\times10^6$
+\end{enumerate}
+\end{enumerate}
+\end{document}
