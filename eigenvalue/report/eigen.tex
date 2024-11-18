@@ -1,0 +1,100 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,20pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+
+\title{Finding Eigenvalues through QR Decomposition Algorithm}
+\author{EE24BTECH11008}
+\date{}
+
+\begin{document}
+
+\maketitle
+\textbf{About eigenvalues:} For a matrix, $\textbf{A}$ the eigen values are the $\lambda\prime s$ which are obtained through solving the equation $$\textbf{AV$=\lambda$ V}$$ where $\textbf{V}$ is the eigenvector.\\
+In general, when a matrix is multiplied with another, it does not produce a scaled multiple of the second one, both for some special matrices, it happens.They are known as eigenvectros and the scaling factor is known as eigenvalue.\\
+For an $n \times n$ matrix usually there exist $n$ number of eigenvectors and eigenvalues.\\
+There are so many algorithms to find out these eigenvalues.
+\section{Introduction}
+I used QR decomposition algorithm to find the eigenvalues of a square matrix. This algorithm works on the basis that a square matrix can be decomposed into product of an orthogonal matrix $\textbf{Q}$ $\brak{\textbf{$Q^TQ=I$}}$ and an upper triangular matrix $\textbf{R}$, such that:
+$$\textbf{A=QR}$$
+\section{Explanation of algorithm}
+\begin{description}
+    \item[*] First compute $\textbf{Q}$ and $\textbf{R}$ using $\text{Gram-Schmidt.}$
+    \item[*] Then get $\textbf{$A_1$ =RQ}$
+    \item[*] Repeat the process for around 1000 times and figure out $\textbf{$A_k$}$ 
+    \item[*] $\because$ $\textbf{A}$ and $\textbf{$A_1$}$ are similar, eigenvalues of them are also similar.
+    \item[*] Repeat the process for somany times,automatically we will find that all the non-diagonal elements of$\textbf{$A_k$}$ will tend to zero and eigenvalues of the matrix will be the diagonal elements of that matrix.
+    \item[*] This algorithm does not works for complex inputs. 
+\end{description}
+
+\section{Time Complexity of the QR Decomposition Algorithm}
+ For a matrix of size $ n \times n ,$ QR decomposition needs $\textbf{O}(n^3)$ operations. $\therefore$ Computational cost of one iteration is $\textbf{O}(n^3)$.For well-conditioned and diagonalizable matrices, the number of iterations required is typically $\textbf{O}(n)$.The overall time complexity of the QR algorithm for eigenvalue computation is: $\textbf{O($n^4$)}$
+
+
+
+\subsection{Memory Usage in the Code}
+The code allocates memory dynamically for four matrices:
+\begin{itemize}
+    \item Matrix  A: The input matrix for which eigenvalues are to be computed.
+    \item Matrix  Q: The orthogonal matrix produced during the decomposition.
+    \item Matrix  R: The upper triangular matrix produced during the decomposition.
+    \item Matrix  $A_1$: A temporary matrix used to store the updated matrix after each iteration.
+\end{itemize}
+
+Each matrix is dynamically allocated as a \( n \times n \) array, requiring \( O(n^2) \) memory. With four matrices, the total memory usage is:
+
+$$
+\text{Total Memory} = 4 \times O(n^2) = O(n^2)
+$$
+
+\textbf{For large matrices:} For large matrices, this algorithm is not effieint, $\because$ the memory usage is of order $O\brak{n^2}$\\ \\
+     \textbf{For Symmetric and Diagonal matrices:} Other algorithms are efficient than this one.\\ \\
+ \textbf{Comparison with other algorithms:}One of its key strengths is that it can compute all eigenvalues of a matrix, unlike the Power method algorithm, which only finds the largest eigenvalue, or Inverse Iteration method, which is better suited for finding eigenvalues near a integer.\\ 
+      But the QR algorithm is slow and computationally expensive, $\because$ it has a time complexity of $O(n^3).$\\
+
+Lanczos and Davidson or ARPACK are more more efficient for large matrices. These algorithms are for sparse matrices and can find a few eigenvalues much more quickly by taking advantage of the matrix$'$s sparsity. But, they are generally limited to symmetric matrices.
+
+In comparison, the Jacobi method is another algorithm that works well for symmetric matrices, but it tends to be very slow and inefficient for large problems. \\Overall, while the QR algorithm is a reliable choice for most situations, it may not always be the best option for large-scale problems. In such cases, methods like Lanczos or Davidson or ARPACK are often faster, and if you're just looking for specific eigenvalues, the Power method or Inverse Iteration might do the job more efficiently. 
+\section{Conclusion:}So, choosing the right algorithm depends on the size of your matrix, its properties, and the specific eigenvalues you're interested in finding.
+
+\end{document}
+
